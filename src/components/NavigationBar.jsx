@@ -15,6 +15,7 @@ import MonitoringScreen from '../pages/MonitoringScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
+
 // const Drawer = createDrawerNavigator();
 
 
