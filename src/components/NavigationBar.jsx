@@ -10,6 +10,10 @@ import Header from './AppHeaderBar';
 import { createStackNavigator } from '@react-navigation/stack';
 import CartScreen from '../pages/CartScreen';
 import MonitoringScreen from '../pages/MonitoringScreen';
+import AdressZoneScreen from '../pages/AdressZoneScreen';
+import EventScreen from '../pages/EventScreen';
+import HistoryFormScreen from '../pages/HistoryFormScreen';
+import SettingsScreen from '../pages/SettingsScreen';
 // import { DrawerContent } from './DrawerNav';
 // import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -27,7 +31,8 @@ const BottomBar = ()=>{
         initialRouteName="Cart"
         backBehavior="initialRoute"
         shifting={true}
-        sceneAnimationEnabled={false}
+        sceneAnimationEnabled={true}
+        sceneAnimationType='shifting'
         activeColor="#2897FF" // Color for active icon
         inactiveColor="#D4D6DD" // Color for inactive icon
         activeIndicatorStyle={{
@@ -55,6 +60,39 @@ const BottomBar = ()=>{
           component={MonitoringScreen}
           options={{
             tabBarIcon: 'map-marker-radius-outline',
+            tabBarColor: '#000',
+          }}
+        />
+        <Tab.Screen
+          name="Adresse"
+          component={AdressZoneScreen}
+          options={{
+            tabBarIcon: 'map-marker-path',
+            tabBarColor: '#000',
+          }}
+        />
+        <Tab.Screen
+          name="Evénement"
+          component={EventScreen}
+          options={{
+            tabBarIcon: 'alert-outline',
+            tabBarColor: '#000',
+          }}
+        />
+        <Tab.Screen
+          name="Historique"
+          component={HistoryFormScreen}
+          options={{
+            tabBarIcon: 'history',
+            tabBarColor: '#000',
+          }}
+        />
+        
+        <Tab.Screen
+          name="Paramètres"
+          component={SettingsScreen}
+          options={{
+            tabBarIcon: 'cog-outline',
             tabBarColor: '#000',
           }}
         />

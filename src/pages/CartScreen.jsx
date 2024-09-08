@@ -3,8 +3,9 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
-import MapView, { Marker, UrlTile } from 'react-native-maps';
+// import MapView, { Marker, UrlTile } from 'react-native-maps';
 import WebView from 'react-native-webview';
+import CartComponents from '../components/CartComponents';
 
 const CartScreen = () => {
   return (
@@ -28,7 +29,7 @@ const CartScreen = () => {
           maximumZ={19}
         />
       </MapView> */}
-      <WebView
+      {/* <WebView
           originWhitelist={['*']}
           source={{ html: `<html>
           <body>
@@ -37,7 +38,8 @@ const CartScreen = () => {
           </body>
       </html>` }}
           style={styles.map}
-        />
+        /> */}
+        <CartComponents/>
     </View>
   );
 };
